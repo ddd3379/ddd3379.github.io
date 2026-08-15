@@ -1,0 +1,138 @@
+:root {
+  --ink: #1c2321;
+  --paper: #f7f6f2;
+  --accent: #0e6b5f;
+  --muted: #5b645f;
+  --border: #dedad2;
+  --card: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #eae7df;
+    --paper: #14181a;
+    --accent: #4fd6c0;
+    --muted: #9aa39d;
+    --border: #2a3230;
+    --card: #1b2123;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Segoe UI", sans-serif;
+  line-height: 1.75;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+header.site {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+header.site a.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav.crumbs {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+nav.crumbs a { color: var(--muted); }
+
+h1 {
+  font-size: 1.7rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2.2rem 0 0.8rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+p.lead {
+  color: var(--muted);
+  font-size: 1.02rem;
+  margin-top: 0;
+}
+
+p, li { font-size: 0.98rem; }
+
+a { color: var(--accent); }
+
+.updated {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.3rem 1.4rem;
+  margin: 1rem 0;
+}
+
+.app-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.app-card .name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.app-card .desc {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.button:visited { color: #fff; }
+
+ul.plain { padding-left: 1.3rem; }
+
+footer.site {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
