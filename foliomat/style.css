@@ -1,0 +1,58 @@
+:root {
+  --ink: #17212b;
+  --paper: #f5f2e9;
+  --accent: #087f8c;
+  --accent-strong: #086672;
+  --muted: #5f6870;
+  --border: #d9d4c9;
+  --card: #fffdf8;
+  --navy: #172a3a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f2efe7;
+    --paper: #111a22;
+    --accent: #54d5df;
+    --accent-strong: #80e5ec;
+    --muted: #aeb8be;
+    --border: #33434d;
+    --card: #18252f;
+    --navy: #f2efe7;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Segoe UI", sans-serif;
+  line-height: 1.75;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+header.site { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+header.site a.brand { color: var(--ink); font-size: 1.05rem; font-weight: 700; text-decoration: none; }
+nav.crumbs { color: var(--muted); font-size: .9rem; }
+nav.crumbs a { color: var(--muted); }
+.hero { display: grid; grid-template-columns: 112px 1fr; gap: 1.5rem; align-items: center; margin-bottom: 2rem; }
+.app-icon { width: 112px; height: 112px; border-radius: 24px; box-shadow: 0 10px 28px rgba(0, 0, 0, .18); }
+h1 { color: var(--navy); font-size: 2rem; letter-spacing: .01em; line-height: 1.3; margin: 0 0 .45rem; }
+h2 { border-bottom: 1px solid var(--border); font-size: 1.15rem; margin: 2.2rem 0 .8rem; padding-bottom: .4rem; }
+h3 { font-size: 1rem; margin: 1.6rem 0 .4rem; }
+p, li { font-size: .98rem; }
+p.lead { color: var(--muted); font-size: 1.05rem; margin: 0; }
+a { color: var(--accent-strong); }
+.updated { color: var(--muted); font-size: .85rem; margin-bottom: 2rem; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; margin: 1rem 0; padding: 1.3rem 1.4rem; }
+.card h2 { margin-top: 0; }
+.button { background: var(--accent); border-radius: 9px; color: white; display: inline-block; font-size: .95rem; font-weight: 650; padding: .7rem 1.3rem; text-decoration: none; }
+.button:visited { color: white; }
+ul.plain { padding-left: 1.3rem; }
+footer.site { border-top: 1px solid var(--border); color: var(--muted); font-size: .85rem; margin-top: 4rem; padding-top: 1.5rem; }
+@media (max-width: 520px) {
+  .hero { grid-template-columns: 76px 1fr; gap: 1rem; }
+  .app-icon { border-radius: 17px; height: 76px; width: 76px; }
+  h1 { font-size: 1.65rem; }
+}
