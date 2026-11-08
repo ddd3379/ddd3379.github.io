@@ -56,3 +56,15 @@ footer.site { border-top: 1px solid var(--border); color: var(--muted); font-siz
   .app-icon { border-radius: 17px; height: 76px; width: 76px; }
   h1 { font-size: 1.65rem; }
 }
+
+.flow { display: flex; align-items: stretch; gap: .5rem; margin: 1rem 0 1.4rem; }
+.flow > b { align-self: center; color: var(--muted); }
+.flow > div { flex: 1; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: .6rem .7rem; display: flex; flex-direction: column; min-width: 0; }
+.flow strong { color: var(--accent-strong); font-size: .92rem; }
+.flow span { color: var(--muted); font-size: .8rem; line-height: 1.5; }
+table.ops { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+table.ops th, table.ops td { text-align: left; padding: .5rem .4rem; border-bottom: 1px solid var(--border); font-size: .95rem; }
+table.ops th { color: var(--muted); font-size: .8rem; font-weight: 600; }
+table.ops td:first-child { white-space: nowrap; }
+.g { display: inline-block; background: var(--accent); color: #fff; border-radius: 999px; font-size: .75rem; padding: 0 .55rem; margin-right: .3rem; }
+@media (max-width: 520px) { .flow { flex-direction: column; } .flow > b { transform: rotate(90deg); } table.ops td:first-child { white-space: normal; } }
